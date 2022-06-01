@@ -30,7 +30,7 @@ public abstract class Lesson implements Serializable {
                     @JoinColumn(name = "user_id"), //bloco para conseguir fazer a associação com as duas chaves do enrollment
                     @JoinColumn(name = "offer_id")
             })
-    private Set<Enrollment> enrollmentDone = new HashSet<>();
+    private Set<Enrollment> enrollmentsDone = new HashSet<>();
 
     public Lesson() { }
 
@@ -74,8 +74,8 @@ public abstract class Lesson implements Serializable {
     }
 
     //Não colocasse SET de coleção
-    public void setEnrollmentDone(Set<Enrollment> enrollmentDone) {
-        this.enrollmentDone = enrollmentDone;
+    public void setEnrollmentsDone(Set<Enrollment> enrollmentsDone) {
+        this.enrollmentsDone = enrollmentsDone;
     }
 
     @Override
